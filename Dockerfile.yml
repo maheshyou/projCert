@@ -1,2 +1,8 @@
-FROM devopsedu/webapp
-COPY . /var/www/html
+# Use a base PHP image
+FROM php:7.4-apache
+
+# Copy the PHP application files to the Apache directory
+COPY . /var/www/html/
+
+# Expose port 80
+EXPOSE 80
